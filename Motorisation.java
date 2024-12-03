@@ -1,4 +1,4 @@
-public enum Motorisation{
+public interface Motorisation{
     public Carburant typeCarburant(); //retourne le type du carburant
     public void periodiciteVidange(); /*calcul la périodicité du vidange en mois
 en fonction du type du carburant du véhicule :

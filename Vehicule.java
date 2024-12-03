@@ -1,4 +1,4 @@
-public class Vehicule(){
+public class Vehicule implements Motorisation{
 
     private int matricule;
     private int modele;
@@ -6,6 +6,8 @@ public class Vehicule(){
 
     private double capaciteReservoir;
     private double quantiteCarburant; 
+
+    private int dernierVidange;
 
     public Vehicule(int modele,int matricule, double prix){
         this.matricule += 1;
@@ -34,6 +36,17 @@ public class Vehicule(){
             return quantitaCarburant += quantite;
         }else{
             System.ot.print("La quantité ajoutée dépasse la capacité de la véhicule!")
+        }
+    }
+    public periodiciteVidange(){
+        if(this.typeCarburant === DEISEL){
+            System.out.print("La périodicité du vidange est 10mois")
+        }
+        elseif(this.typeCarburant === ESSENCE){
+            System.out.print("La périodicité du vidange est 12mois")
+        }
+        elseif(this.typeCarburant === GAZ){
+            System.out.print("La périodicité du vidange est 18mois")
         }
     }
 }
